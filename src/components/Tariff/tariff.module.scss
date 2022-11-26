@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+@mixin text_notes {
+    text-align: center;
+    color: rgb(69,71,73);
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.tariff {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    min-width: 150px;
+    max-width: 250px;
+
+    &_item {
+        text-align: center;
+        color:aliceblue;
+        padding: 0.5rem;
+        font-weight: 100;
+        font-size: 1.1em;
+        border-bottom: 1px solid white;
+    }
+
+    &_price {
+            position: relative;
+            top: 2rem;
+            left: 5rem;
+            padding-bottom: 3.5rem;
+            font-size: 3rem;
+            font-weight: 400;
+            color: aliceblue;
+
+            &::before {
+                content: 'руб';
+                position: absolute;
+                top: -1rem;
+                left: -2.2rem;
+                font-size: 0.4em;
+                font-weight: 100;
+            }
+
+            &::after {
+                content: '/мес';
+                position: absolute;
+                top: 2.8rem;
+                font-size: 0.4em;
+                font-weight: 100;
+            }
+    }
+
+    &_speed {
+        @include text_notes;
+        padding: 1rem;
+        background-color: rgb(248,248,248);
+    }
+
+    &_notes {
+        @include text_notes;
+        background-color: rgb(238,238,238);
+        padding: 1.1rem;
+        line-height: 1.5rem;
+    }
+}
+
+//цвета карточек
+.header_blue {
+    background-color: rgb(35,155,171);
+}
+
+.card_blue {
+    background-color: rgb(44,193,213);
+}
+
+.header_green {
+    background-color: rgb(29,139,113);
+}
+
+.card_green {
+    background-color: rgb(36,174,141);
+}
+
+.header_red {
+    background-color: rgb(196,85,75);
+}
+
+.card_red {
+    background-color: rgb(244,106,95);
+}
+
+.header_black {
+    background-color: rgb(40,47,55);
+}
+
+.card_black {
+    background-color: rgb(51,58,68);
+}
+
+.selected {
+    transform: scale(1.1);
+    box-shadow: rgba(75, 75, 75, 0.2) 0px 2px 8px 0px;
+    }
