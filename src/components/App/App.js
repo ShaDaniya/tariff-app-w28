@@ -9,7 +9,7 @@ function App() {
   return (
     <div className={style.App}>
       {data.map((tariff, index) => (
-        <Tariff item={tariff.item} price={tariff.price} speed={tariff.speed} notes={tariff.notes} header_color={header_color[index]} card_color={card_color[index]} key={index} isSelected={tariff.isSelected}/>
+        <Tariff item={tariff.item} price={tariff.price} speed={tariff.speed} notes={tariff.notes} header_color={header_color[index]} card_color={card_color[index]} key={index} />
       ))}
     </div>
   );
